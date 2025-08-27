@@ -1,0 +1,32 @@
+<h2>Enregistrement</h2>
+<form class="generic-form" action="register.php" method="post">
+    <fieldset>
+        <legend><i class="fa fa-sticky-note-o"></i> Nouvel Auteur</legend>
+        <ul>
+            <li>
+				<label for="firstName">Prénom :</label>
+				<input type="text" placeholder="Prénom" id="firstName" name="firstName" required>
+			</li>
+			<li>
+				<label for="lastname">Titre :</label>
+				<input type="text" placeholder="Nom" id="lastname" name="lastname" required>
+			</li>
+			<li>
+				<label for="mail">Adresse mail :</label>
+				<input type="mail" placeholder="Adresse mail" id="mail" name="email" required>
+			</li>
+			<li>
+				<label for="pseudo">Pseudo :</label>
+				<input type="text" placeholder="Pseudo" id="pseudo" name="pseudo">
+            </li>
+            <li>
+				<label for="psw">Mot de passe :</label>
+				<input type="password" placeholder="Mot de passe" id="psw" name="psw" required>
+			</li>
+			<li>
+                <button class="button button-primary" type="submit">Enregistrer</button>
+                <a class="button button-cancel" href="index.php">Annuler</a>
+            </li>
+        </ul>
+    </fieldset>
+</form>

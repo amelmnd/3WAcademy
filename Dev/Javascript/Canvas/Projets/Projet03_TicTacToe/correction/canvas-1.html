@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>HTML 5 Canvas - Formes</title>
+		<style>
+			body {
+				font: 14px sans-serif;
+				color: #333;
+			}
+			h1, p {
+				text-align: center;
+			}
+			canvas {
+				display: block;
+				margin: 40px auto;
+				border: 1px dashed #999;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>HTML 5 Canvas : Formes</h1>
+		<p>Les différentes méthodes de dessin</p>
+		<canvas id="my-canvas" width="640" height="640"> 
+			Texte alternatif pour les navigateurs ne supportant pas Canvas.
+		</canvas>
+		<script type="text/javascript">
+
+			// Vars
+			var margin = 20;
+			var size = 200;
+			var hue = 0;
+
+			// Canvas & Context
+			var canvas = document.getElementById('my-canvas');
+			var context = canvas.getContext('2d');
+
+			// Background
+			context.fillStyle = '#333';
+			context.fillRect(10,10,620,620);
+			
+			// Generalities
+			context.lineWidth = 10;
+			context.lineJoin = 'round';
+			context.lineCap = 'round';
+			context.strokeStyle = '#fff';
+			
+			// Square
+			context.strokeRect(70,70,200,200);
+			// Circle
+			context.beginPath();       // Début du chemin
+			context.arc(470,170,100,0,Math.PI*2,true); // Arc de cercle: x ,y ,rayon , angle début, angle fin
+			context.stroke();          // Tracé
+			context.closePath();       // Fermeture du chemin
+			// Ovoid help
+			context.save();
+			context.lineWidth = 5;
+			context.setLineDash([20,20]);
+			context.lineDashOffset=10;
+			context.strokeStyle = '#666';
+			context.strokeRect(70,370,200,200);
+			context.restore();
+			// Ovoid
+			context.beginPath();       // Début du chemin
+			context.moveTo(70,370);    // Le tracé part du point 50,50
+			context.quadraticCurveTo(270,370,270,570); // Quadratic: controle-1-x, controle-1-y, x2, y2
+			context.moveTo(70,370);    // Le tracé part du point 50,50
+			context.bezierCurveTo(70,570,70,570,270,570); // Bezier: controle-1-x, controle-1-y, controle-2-x, controle-2-y, x2, y2
+			context.stroke();          // Tracé
+			context.closePath();       // Fermeture du chemin
+			// Cross
+			context.beginPath();       // Début du chemin
+			context.moveTo(370,370);   // Le tracé part du point 370,370
+			context.lineTo(570,570);   // Un segment est ajouté vers 570,570
+			context.moveTo(570,370);   // Puis on saute jusqu'à 570,370
+			context.lineTo(370,570);   // Puis on trace jusqu'à 370,570
+			context.stroke();          // Tracé
+			context.closePath();       // Fermeture du chemin
+
+		</script>
+	</body>
+</html>

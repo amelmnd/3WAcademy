@@ -1,0 +1,19 @@
+p{
+    font-size: 20px;
+}
+table, td, tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td{
+    background: #A8D7E5;
+    padding: 10px;
+}
+td:hover{
+    background: #DDFFFF;
+    color: red;
+}
+.darkblue{
+    background: darkblue;
+    color: white;
+}

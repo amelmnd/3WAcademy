@@ -1,0 +1,25 @@
+<h2><i class="fa fa-home"></i> Accueil <?php if(!empty($_SESSION)) {?>
+            , Bonjour 
+            <?= $_SESSION['firstName']; }?></h2>
+<!-- Liste des articles du blog -->
+<ul class="post-list">
+    <?php foreach ($thePosts as $key => $value ) {?>
+    <li class="post">
+        <h3><i class="fa fa-hand-o-right"></i>&nbsp;
+        <a href="post.php?id=<?=$value['post_id'] ?>" title="Consulter l'article"><?=$value['post_title']?></a>
+        </h3>
+
+
+        <article>
+            <?php if (strlen($value['post_contents'])>50){
+                $contentShort = htmlspecialchars(substr($value['post_contents'], 0, 50));
+                echo $contentShort;
+            }
+            else{
+                echo htmlspecialchars($value['post_contents']);
+            };?> [...]</article>
+
+        <small>Rédigé par <?= $value['author_firstName']?> <?= $value['author_lastName']?>, le <?=$value['post_dateCreation']?></small>
+        </li>
+        <?php } ?>
+    </ul>                     

@@ -1,0 +1,7 @@
+.generic-form input:required .generic-form textarea:required {
+    border-color: red;
+}
+
+.generic-form input:focus:invalid .generic-form textarea:focus:invalid {
+    border-color: green;
+}

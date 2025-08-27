@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(149, 183, 194);
+}
+main{
+    max-width: 500px;
+    margin: 0 auto;
+}
+section {
+    margin: 30px;
+}
+
+.newtask label:nth-child(1) {
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+}
+input[type="button"],
+fieldset input[type="submit"] {
+    display: inline-block;
+    width: 100px;
+    margin: 20px;
+}
+li p {
+    display: none;
+}
+li:hover p {
+    display: block;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+li{
+    list-style: none;
+}
+input[type="checkbox"]:checked+label {
+    text-decoration: line-through;
+    color: red;
+}

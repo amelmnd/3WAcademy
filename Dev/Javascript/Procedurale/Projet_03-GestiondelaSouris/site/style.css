@@ -1,0 +1,28 @@
+
+main{
+    padding-left: 50px;
+}
+
+.rectangle{
+    background-color: royalblue;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+        transition: background-color 0.8s;
+        -webkit-transition: background-color 0.8s;
+        -moz-transition: background-color 0.8s;
+        -ms-transition: background-color 0.8s;
+        -o-transition: background-color 0.8s;
+}
+
+.important{
+    background-color: firebrick;
+
+}
+.good{
+    background-color: limegreen;
+}

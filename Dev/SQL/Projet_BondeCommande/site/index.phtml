@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Commandes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="conteneur">
+        <h1>Bons de commande</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th><h2>Commande</h2></th>
+                    <th><h2>Date de la commande</h2></th>
+                    <th><h2>Date de la livraison</h2></th>
+                    <th><h2>Statut</h2></th>
+                </tr>
+            </thead>
+            <tbody>
+            <tbody>
+                <?php foreach($commandes as $value){?>
+                    <tr>
+                        <td>
+                            <a href="commande.php?orderNumber=<?=$value['orderNumber']?>"><?=$value['orderNumber']?></a>
+                        </td>
+                        <td>
+                            <?=$value['orderDate']?>
+                        </td>
+                        <td>
+                            <?=$value['shippedDate']?>
+                        </td>
+                        <td>
+                            <?=$value['status']?>
+                        </td>
+                    </tr>
+                    <?php }?>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

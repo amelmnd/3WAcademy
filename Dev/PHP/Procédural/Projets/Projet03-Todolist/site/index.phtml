@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="contener">
+        <header>
+            <h1>Ma To do list</h1>
+        </header>
+        <section class="tackList">
+            <form method="POST" action="supp.php">
+                <ul><?php  foreach ($tasks as $key =>$task) {?>
+                
+                    
+                    <li>                
+                        <input type="checkbox" name="task[]" id="task" value="1">
+                        <label for="task"><?=$task[0]?>,<?=$task[2]?></label>                        
+                        <p><?=$task[1]?></p>
+                    </li>
+                
+                <?php } ?>
+                </ul>
+
+                <input type="submit" value="Suprimer">
+            </form>
+</section>
+        <hr>
+        <section class="newtask">
+            <form action="form.php" method="post">
+                <fieldset>
+                    <legend>Nouvelle tâche</legend>
+                    <div>
+                        <label for="title">Titre</label>
+                        <input type="text" name="title" id="title">
+                    </div>
+                    <div>
+                        <label for="descript">Description</label>
+                        <input type="text-area" name="descript" id="descript">
+                    </div>
+                    <div>
+                        <label for="dateline">Date de fin</label>
+                        <input type="date" name="date" id="dateline">
+                    </div>
+                    <div>
+                        <label for="priority">Priorité</label>
+                        <input type="radio" name="priority" id="low" value="low">
+                        <label for="low">Basse</label>
+
+                        <input type="radio" name="priority" id="normal" value="normal">
+                        <label for="normal">Normal</label>
+
+                        <input type="radio" name="priority" id="high" value="high">
+                        <label for="hight">Haute</label>
+
+                    </div>
+                    <input type="submit" value="Enregistrer">
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
+

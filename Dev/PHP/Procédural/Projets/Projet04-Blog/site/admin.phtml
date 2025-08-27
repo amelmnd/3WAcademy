@@ -1,0 +1,38 @@
+<h2><i class="fa fa-cogs"></i> Gestion de Post</h2>
+<a href="addPost.php">Rédiger un nouvel article </a>
+<table></table>
+    <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Article</th>
+            <th>Auteur</th>
+            <th>Catégorie</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>    
+    <?php foreach ($postList as $key => $value ) {?>
+        <tr>
+            <td>
+            <a href="post.php?id=<?=$value['post_id']?>" title="Consulter l'article"><?=$value['post_title']?></a></td>
+            
+            <td><?php if (strlen($value['post_contents'])>50){
+                $contentShort = substr($value['post_contents'], 0, 70);
+                echo $contentShort;
+            }
+            else{
+                echo $value['post_contents'];
+            };?> [...]</td>
+            
+            <td><?=$value['author_firstName'] ?> <?=$value['author_lastName'] ?></td>
+            
+            <td><?=$value['category_name'] ?></td>
+            
+            <td>
+                <a href="upload.php?id=<?=$value['post_id']; ?>"><i class="fa fa-pencil"></i></a>
+                <a href="delete.php?id=<?=$value['post_id']; ?>"><i class="fa fa-remove"></i></a>
+            </td>
+        </tr>
+        <?php } ?>
+    </tbody>
+</table>

@@ -1,0 +1,4 @@
+on creer une fonction de connxetion dans l'ojet avec en instanciation un objet dataBase
+on recupére un seul utilisateur avec son adresse mail
+
+on decalere new Dtabase dans les méthode car cela evite l'utilisation d'un constructeur inutile

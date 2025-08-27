@@ -1,0 +1,22 @@
+on recupére la chaine cripter et on creer une requette pour pouvoir creer un nuveau mot de passe 
+
+on met le mot de passe 2 fois et on fait l'envois du nouveau mot de passe si les messages sont identique sinon on peut mettre en plus un message d'erreur 
+
+on ajout a User une fonction 
+  
+    public function modifyPassword($password, $id) {
+    	$database = new Database();
+
+		$database->executeSql('UPDATE users SET psw = ? WHERE psw = ?', [ $password, $id ]);
+    
+    
+    }   
+
+
+$database->executeSql('UPDATE users SET psw = ? WHERE psw = ? AND email = ?', [ $hashPwd, $id ]);
+on a également besoin de l'adresse mail caril est possible d'avoir des mot e passe identique 
+
+une fois la modification faite on fait une redirection 
+
+
+

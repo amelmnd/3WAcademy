@@ -1,0 +1,80 @@
+    <main>
+        <!-- Affichage du template lié à la vue -->
+        <h2><i class="fa fa-shopping-cart"></i> Passer une commande</h2>
+
+<form data-order-step="run" id="order-form" class="generic-form">
+
+    <!-- Champ caché stockant le prix de vente du produit alimentaire sélectionné -->
+    <input type="hidden" name="salePrice">
+
+    <aside class="error-message hidden">
+        <h3><i class="fa fa-warning"></i> Il y a <em class="total-error-count">1</em> erreur(s) dans le formulaire !</h3>
+        <p></p>
+    </aside>
+
+    <fieldset>
+        <legend>Ajouter un article</legend>
+        <ul>
+            <li>
+                <label for="meal">Nom :</label>
+                <select id="meal" name="meal">
+                    <?php foreach($meals as $key){ ?>
+                        <option id="product" value="<?=$key['Id']; ?>"><?=$key['Name']; ?></option>
+                    <?php }?>
+                </select>
+                <article id="meal-details" class="meal-details no-left-label">
+
+                </article>
+            </li>
+            <li>
+                <label for="quantity">Quantité :</label>
+                <input id="quantity" class="quantity" type="text" maxlength="2" name="quantity" data-name="Quantité" data-type="positive-integer" data-required>
+            </li>
+            <li>
+                <button class="button button-primary no-left-label" id="submit" type="submit">Ajouter</button>
+            </li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>Récapitulatif de la commande</legend>
+        <section id="order-summary " class="nullTab ">
+            <table  class="generic-table">
+                <tbody>
+                    <tr>
+                        <td class="basket-empty ">Votre panier est vide pour le moment !</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="order-summary" class='orderTab'>
+            <table  class="generic-table ">
+                <thead>
+                    <tr>
+                        <th class="number">Quantité</th>
+                        <th class="number">Produit</th>
+                        <th class="number">Prix Unitaire</th>
+                        <th class="number">Prix Total</th>
+                    </tr>                
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </section>
+    </fieldset>
+</form>
+    
+<ul class="link-list">
+    <li>
+        <a href="<?= $requestUrl ?>/validate"><button class="button button-primary valid">Valider la commande</button></a>
+        <a class="button button-cancel small " href="<?= $requestUrl ?>">Annuler</a>
+    </li>
+</ul>
+
+
+<!-- Classes de gestion du formulaire de commande -->
+<!-- Ce code JavaScript n'est chargé QUE depuis l'URL /order/payment/success -->
+ 
+</main>

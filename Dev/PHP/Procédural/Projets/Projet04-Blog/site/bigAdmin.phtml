@@ -1,0 +1,35 @@
+<h2><i class="fa fa-cogs"></i> Panneau d'administration</h2>
+
+<h3>Gestion Author</h3>
+<form class="generic-form" action="upload.php?id=<?=$_GET["id"]?>" method="post">
+
+    <!-- Utilisation d'un champ caché pour spécifier à quel article rattacher le commentaire -->
+    <fieldset>
+        <legend><i class="fa fa-sticky-note-o"></i> Article</legend>
+        <ul>
+            foreach
+            <li>
+<form action="addAuthor.php" method="post">
+    <input type="text" name="firstNameAuthor" id="firstNameAuthor"placeholder="Prénom">
+    <input type="text" name="lastNameAuthor" id="lastNameAuthor" placeholder="Nom">
+    <button type="submit" value="submit"><i class="fa fa-plus-circle"></i></button>
+</form>            </li>
+
+
+<p><strong>Ajouter un auteur</strong> </p>
+<form action="addAuthor.php" method="post">
+    <input type="text" name="firstNameAuthor" id="firstNameAuthor"placeholder="Prénom">
+    <input type="text" name="lastNameAuthor" id="lastNameAuthor" placeholder="Nom">
+    <button type="submit" value="submit"><i class="fa fa-plus-circle"></i></button>
+</form>
+
+
+<h3>Gestion cathégorie</h3>
+
+<p><strong>Ajouter une cathégorie</strong> </p>
+<form action="addCategory.php" method="post">
+    <input type="text" name="addCateg" id="addCateg" placeholder="Cathégorie">
+    <button type="submit" value="submit"><i class="fa fa-plus-circle"></i></button>
+</form>
+
+

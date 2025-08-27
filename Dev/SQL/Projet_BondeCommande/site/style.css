@@ -1,0 +1,36 @@
+body, th{
+    background-color: #f2f1e7;
+    font-size: 16px;
+}
+.conteneur{
+    max-width: 800px;
+    margin: 0 auto;
+}
+h2{
+    font-size: 20px;
+}
+table, th, td, tr{
+    border-collapse: collapse;
+}
+
+td{
+    width:200px;
+    padding: 10px;
+}
+tr:nth-of-type(odd){
+    background-color: rgba(214, 230, 215, 0.3);
+}
+tr:nth-of-type(even){
+    background-color: rgba(131, 150, 133, 0.4);
+
+}
+tr:hover{
+    background-color: #A29891;
+}
+a{
+    text-decoration: none;
+    color: rgb(117, 72, 72);
+}
+a:hover{
+    color: rgb(248, 208, 133);
+}

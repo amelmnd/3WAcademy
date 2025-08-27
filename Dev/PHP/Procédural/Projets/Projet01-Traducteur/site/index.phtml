@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Traducteur Anglais - Français</title>
+</head>
+<body>
+        <form action="index.php" method="POST">
+
+    <label for="mot">Mot : </label>
+    <input type="text" id="mot" name="word">
+    
+    <label for="translet">Sens de traduction :</label>
+
+    <select name="langue"id="translate">
+        <option  value="toEnglish" name="toEnglish">français vers anglais</option>
+        <option value="toFrench" name="toFrench">anglais vers français</option>
+    </select>
+   <button type="submit">Traduction</button>
+   </form>
+</body>
+</html>

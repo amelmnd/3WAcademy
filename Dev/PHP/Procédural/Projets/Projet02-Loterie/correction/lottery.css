@@ -1,0 +1,25 @@
+body
+{
+    /* structure */
+    margin: 0 auto;
+    padding: 1em;
+    min-height: 100%;
+    width: 80%;
+
+    /* presentation */
+    font-family: 'Open Sans', sans-serif;
+}
+
+html
+{
+    /* structure */
+    height: 100%;
+
+    /* presentation */
+    background-color: #F8FFF2;
+}
+
+h1
+{
+    color: #00968B;
+}

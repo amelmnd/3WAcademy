@@ -1,0 +1,27 @@
+	
+meme si les terme ont changer il s'agit des meme elements qu'avant
+    public function executeSql($sql, array $values = array())
+	{
+    	$this->pdo->exec('SET NAMES UTF8');
+        
+        $query = $this->pdo->prepare($sql);
+        
+        $query->execute($values);
+
+    }
+
+on creer ensuite les pages utilil à l'utilisation du pdo puis ensuiteon creer les requetes 
+
+on creer une class user qui va gérer les utilisateurs : ce sont alors des modéles 
+
+pour creer cette nouvelle class on creer un nuveau fichier qui va la contenir 
+
+
+dans le fichier ou l'on a besoin de la class User et DataBase on les includes dans le sens ou l'on a besoin des elements 
+ici on a besoin de Database dans user dons il est avant 
+
+on a besoin de Database dans le user on creer donc un new database dans la classUser 
+
+l'avantege de faire une class c'est que si a plusierus endrot on doit enregistrer un utilisateur alors on creer un objet 
+cela permet de recrrer un personne ce qui permet de crere un personnage 
+

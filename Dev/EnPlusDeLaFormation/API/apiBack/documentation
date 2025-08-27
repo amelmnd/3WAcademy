@@ -1,0 +1,29 @@
+Documentation route 
+
+url de base: http://10.10.109.14/apiBack/
+
+
+Liste dess employer : 
+http://10.10.109.14/apiBack/employees.php  
+
+1 Employer précis
+http://10.10.109.14/apiBack/employees.php?id={employeeNumber}
+
+
+Toutes les Offices 
+http://10.10.109.14/apiBack/offices.php  
+
+
+Toutes les Offices d'un pays
+http://10.10.109.14/apiBack/offices.php?country={country} 
+
+
+Infos d'une office en fonction d'un id
+http://10.10.109.14/apiBack/offices.php?id={officeCode}
+
+
+Nécessite une clé API 
+http://10.10.109.14/apiBack/customer.php?id={customerNumber}&api_key=aze
+
+affectuer une recherche 
+http://10.10.109.14/apiBack/customer.php?keyword={keyWord pour customerName}&api_key=aze

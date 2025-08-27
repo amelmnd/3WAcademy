@@ -1,0 +1,33 @@
+body {
+    margin: 0 auto;
+    width: 90%;
+}
+
+em {
+    color: red;
+    font-weight: bold;
+}
+
+.photo-list {
+    max-width: 800px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.photo-list li {
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 8px;
+    transition: background-color 0.5s;
+}
+
+.photo-list li:hover {
+    background-color: silver;
+}
+
+.photo-list li.selected {
+    background-color: forestgreen;
+}

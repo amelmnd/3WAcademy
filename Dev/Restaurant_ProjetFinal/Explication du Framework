@@ -1,0 +1,107 @@
+sur un framework 
+    CREATIOON DE PAGE ET D'URL 
+
+index.php = entrer du site. 
+on n'y aura qu'une seul age  on utiliseur du rooting d'url
+
+require_once 'library/Configuration.class.php';
+=toutes les paages de la librairie sont charger 
+
+
+$microKernel = new MicroKernel();
+=> controle toute la gestion des pages 
+c'est un controleur le chaife d'orchetre de la page 
+on va cherche la vue 
+
+
+le dossier application est rabger en mode MVC 
+une page est composer d'une vue et d'un controleur rabger dans le dossier controluer et les phtml sont ranger dean le dossier www
+
+
+si on deplie www et controleur on voie qu'il ya un home controleur et un homevue ce sont les homes pages, ils ont le meme prefixe 
+les pages marche par couple on est ibliger de les nomererr avec viex pour les viue et controller pour les pages controler 
+
+si on veux creer une page register on devra creer un dossier register qui va donner le nom a l'url et on doit le nommerr pareil  registerrController.class.phpet parraile dans le dossier www mais avec le nom ResisterView.phtml
+
+on utilise du design patter cad on forme a avoir le mm nom pour le dossierr et pour les fichier 
+
+
+on peut egalement creer des sous dossieer avec un dossier user et avec a l'intérieur un dossier register et un dossier login 
+
+
+ON ne touche pas a INDEX.PHP 
+
+
+Librairie = contenue du framework 
+le coeurs est asser complexe il faut juste apprendre a s'en servir
+
+Le PDO est déjà tous fait et on a accee a DataBase 
+
+
+Front Controler ligne 20 et 21 
+requestUrl-> c'est des variables utilisable sur tout le site $_SERVER est surper global qui donner l'url surlequel on ce trouve 
+
+
+wwwUrl est par rapport a la ricne par rapport au dossier www 
+permet d'automatiser autmatqiuement les urls dans les a et va recontruire l'url automatiquement 
+=> utilisation = <a href="<?=$requestUrl?User/login?>">
+    -lien 
+=> image :<img src="<?= $wwwUrl ?>/images/payment/paypal.png" alt="PayPal"></li>
+
+
+permet de ce diriger de  page en page ou de recupere les asset (image etc)
+
+
+
+http.class 
+methode donner qui peuvent etres utiliseur
+redirectTo permet de faire une redirection l n'ya q'a mettre ma fin de l'url 
+
+
+
+fichier configuration. class 
+permet de chargerles code pour ce connecter a la base de donner 
+
+
+dossier config 
+il faut remplir les finformation pour ce connecter a la base de donner 
+ce sont les donner de connextion de la requete pdo 
+
+
+dossier model 
+les fichier dans ce modele doiventtjs avoir un model.php en fin
+
+c'est la programmation en MVC : model vue controleur 
+model serta relieer les base de donner 
+controller recupere post et get 
+vue =affichage 
+                                                                                            
+                                                                
+homeCotroler
+on sera tjs obliger de faire une page controler de cette facon 
+pour separe selon la forme d'arriver des donnees 
+equivament de if(!empty(homeController))
+on adapte juste le nom de la class 
+
+class HomeController
+{
+    public function httpGetMethod(Http $http, array $queryFields)
+    {
+    	/*
+    	 * Méthode appelée en cas de requête HTTP GET
+    	 *
+    	 * L'argument $http est un objet permettant de faire des redirections etc.
+    	 * L'argument $queryFields contient l'équivalent de $_GET en PHP natif.
+    	 */
+    }
+
+    public function httpPostMethod(Http $http, array $formFields)
+    {
+    	/*
+    	 * Méthode appelée en cas de requête HTTP POST
+    	 *
+    	 * L'argument $http est un objet permettant de faire des redirections etc.
+    	 * L'argument $formFields contient l'équivalent de $_POST en PHP natif.
+    	 */
+    }
+}

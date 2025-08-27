@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>post</title>
+	<meta charset="utf-8">
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+</head>
+<body>
+	<p id="para"><?= $str['champText'] ?></p>
+	<form>
+		<input type="text" name="changedString" id="changedString">
+		<input id="changeText" type="submit" name="modifier">
+	</form>
+
+	<form method="post" enctype="multipart/form-data" action="upload.php">
+		<p>
+		<input type="text" name="newName">
+		<input type="file" name="fichier" size="30" placeholder="canard">
+		<input type="submit" value="Uploader">
+		</p>
+	</form>
+</body>
+<script type="text/javascript" src="ajax.js"></script>
+</html>

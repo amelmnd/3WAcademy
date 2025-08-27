@@ -1,0 +1,51 @@
+
+<main>
+    <!-- Affichage du template lié à la vue -->
+    <h2><i class="fa fa-check"></i> Payer la commande</h2>
+
+<section class="invoice">
+    <p><strong><?= $_SESSION['firstName']; ?>  <?= $_SESSION['lastName']; ?></strong></p>
+    <p><?= $_SESSION['address']; ?></p>
+    <p><?= $_SESSION['zipCode']; ?> <span class="city"><?= $_SESSION['city']; ?></span></p>
+</section>
+
+<table class="generic-table meal-list">
+    <caption>Récapitulatif de la commande</caption>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th class="number">Quantité</th>
+            <th class="number">Prix Unitaire</th>
+            <th class="number">Prix Total</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total HT</td>
+            <td id="totalht"></td>
+        </tr>
+        <tr>
+            <td colspan="3">TVA (20%)</td>
+            <td id="tva"></td>
+        </tr>
+        <tr>
+            <td class="colorful" colspan="3">Total TTC</td>
+            <td id="totalttc" class="colorful"></td>
+        </tr>
+    </tfoot>
+</table>
+
+<hr>
+<h3>Merci de bien vouloir procéder au paiement de la commande.</h3>
+<form class="generic-form" action="<?= $requestUrl ?>/payment" method="POST">
+	<ul>
+        <input id="orderValidation" type="hidden" name="order" value="">
+		<li>
+			<input class="button button-primary" type="submit" value="Payer">
+			<a class="button button-cancel small" href="<?= $requestUrl ?>">Annuler</a>
+		</li>
+	</ul>
+</form>

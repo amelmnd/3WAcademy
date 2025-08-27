@@ -1,0 +1,9 @@
+body{
+    background: rgb(111, 185, 204);
+}
+#masterpiece{
+    display: block;
+    background: white;
+    border: 10px solid rgb(79, 114, 122);
+    margin: 0 auto;
+}

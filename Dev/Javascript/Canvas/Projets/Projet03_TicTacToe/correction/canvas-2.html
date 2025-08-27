@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>HTML 5 Canvas - Boucles et fonctions</title>
+		<style>
+			body {
+				font: 14px sans-serif;
+				color: #333;
+			}
+			h1, p {
+				text-align: center;
+			}
+			canvas {
+				display: block;
+				margin: 40px auto;
+				border: 1px dashed #999;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>HTML 5 Canvas - Boucles et fonctions</h1>
+		<p>Actualiser la page</p>
+		<canvas id="my-canvas" width="640" height="640"> 
+			Texte alternatif pour les navigateurs ne supportant pas Canvas.
+		</canvas>
+		<script type="text/javascript">
+
+			// Vars
+			var margin = 20;
+			var size = 200;
+			var hue = 0;
+
+			// Canvas & Context
+			var canvas = document.getElementById('my-canvas');
+			var context = canvas.getContext('2d');
+
+			// Background
+			context.fillStyle = '#333';
+			context.fillRect(10,10,620,620);
+			
+			// Generalities
+			context.lineWidth = 10;
+			context.lineJoin = 'round';
+			context.lineCap = 'round';
+			context.strokeStyle = '#444';
+		
+			// Save
+			context.save();
+
+			// Design
+			context.lineWidth = 4;
+			context.setLineDash([20,20]);
+			context.lineDashOffset = 10;
+
+			// Board
+			context.beginPath();
+			context.moveTo(size+margin,margin);
+			context.lineTo(size+margin,size*3+margin);
+			context.moveTo(size*2+margin,margin);
+			context.lineTo(size*2+margin,size*3+margin);
+			context.moveTo(margin,size+margin);
+			context.lineTo(size*3+margin,size+margin);
+			context.moveTo(margin,size*2+margin);
+			context.lineTo(size*3+margin,size*2+margin);
+			context.stroke();
+			context.closePath();
+
+			// Restore
+			context.restore();
+			
+			// Loop
+			for (var i=0; i<3; i++) {
+				for (var j=0; j<3; j++) {
+					hue = hue+20;
+					context.strokeStyle = 'hsl('+hue+',75%,50%)';
+					if (Math.random() > 0.5) {
+						cross(i,j);
+					} else {
+						circle(i,j);
+					}
+				}
+			}
+
+			// Cross
+			function cross(i,j) {
+				x = i*size+size/2+margin;
+				y = j*size+size/2+margin;
+				half = size/3-margin;
+				context.beginPath();
+				context.moveTo(x-half,y-half);
+				context.lineTo(x+half,y+half);
+				context.moveTo(x-half,y+half);
+				context.lineTo(x+half,y-half);
+				context.stroke();
+				context.closePath();
+			}
+			
+			// Circle
+			function circle(i,j) {
+				x = i*size+size/2+margin;
+				y = j*size+size/2+margin;
+				half = size/3-margin;
+				context.beginPath();
+				context.arc(x,y,half,0,Math.PI*2,true);
+				context.stroke();
+				context.closePath();
+			}
+
+		</script>
+	</body>
+</html>

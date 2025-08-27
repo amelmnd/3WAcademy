@@ -1,0 +1,26 @@
+Exo : barre de chargement
+Ecrire un script qui rempli une barre au fur et à mesure jusqu'a qu'elle soit pleine a 100%.
+
+Ecrire au passage quelque part sur la barre le pourcentage actuel.
+
+L'affichage de la barre peut être fait en HTML
+
+Exemple ici : https://jsfiddle.net/5c22uqhw/
+
+
+
+<script>
+
+
+function test() {
+
+	console.log('hello')
+}
+
+var repeat = window.setInterval(test, 1000); // repete la fonction test toutes les secondes
+
+window.clearInterval(repeat) // arrête le setInterval
+
+p.textContent = 'coucou'
+
+</script>

@@ -1,0 +1,1 @@
+tester s'il y a une cession de conession et le rediriger vers le login et 

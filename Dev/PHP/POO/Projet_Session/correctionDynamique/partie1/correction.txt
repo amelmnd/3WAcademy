@@ -1,0 +1,110 @@
+fichier de bases 
+
+on a besoin de creer une petite librairie 
+on va ecrire les class comme ca : class/Database.class.php
+
+la premiére parie du pdo est de recupérer un fetchAll
+
+on part d'un PDO classique procédural que l'on transforme en librairie:
+
+
+$pdo = new PDO('mysql:host=localhost;dbname=session', 'root', 'troiswa');
+$pdo->exec('SET NAMES UTF8');
+$query = $pdo->prepare
+	(
+	    'SELECT * FROM users'
+	);
+$query->execute( [  ] );
+$users = $query->fetchAll(PDO::FETCH_ASSOC);
+
+on creer une classe qui contient un contructeur 
+
+
+class Database
+{
+	private $pdo;
+
+        private $pdo = $pdo de la requete pdo 
+
+
+    public function __construct() {
+        //instanncie qui un existe un objet qui exite deja en php 
+
+        constructeur = paramétre de la requete pdo 
+        on instancie un attribut qui est coder nativement en php 
+
+    	$this->pdo = new PDO('mysql:host=localhost;dbname=session', 'root', 'troiswa');
+            paramétre définit a l'origine avec la création du constructeur de la requte pdo 
+    
+    }
+    
+    public function query($sql, array $argument= [] )
+                                array = précise le type de la variable 
+    {                           = [] = valeur par défaut si aucun élément ne lui est passer 
+
+    	$this->pdo->exec('SET NAMES UTF8');
+        equivalent à $pdo->exec('SET NAMES UTF8');
+
+
+		$query = $this->pdo->prepare($sql  );
+        equivalent à $query = $pdo->prepare
+                        (
+                            'SELECT * FROM users'
+                        );
+        $sql permet de passer la requete sql que l'on veux et qui peut etrs différente a chaque fois 
+
+        $query->execute( $argument )
+        equivalent à $query->execute( [  ] );
+	}
+
+
+
+
+
+
+    ==> donne en finalité une class qui contient des fontion permettant de construire une requete pdo quelque soit la finalité du resultat fetch ou fetchAll : 
+
+class Database
+{
+	private $pdo;
+    
+    public function __construct() {
+    	$this->pdo = new PDO('mysql:host=localhost;dbname=session', 'root', 'troiswa');
+    }
+    
+    
+    public function query($sql, array $criteria= [] )
+    {
+    	$this->pdo->exec('SET NAMES UTF8');
+		$query = $this->pdo->prepare( $sql );
+        $query->execute( $criteria ); 
+        return $query->fetchAll(PDO::FETCH_ASSOC);
+	}
+    
+    public function queryOne($sql, array $criteria= [] )
+    {
+    	$this->pdo->exec('SET NAMES UTF8');
+		$query = $this->pdo->prepare( $sql );
+        $query->execute( $criteria ); 
+        return $query->fetch(PDO::FETCH_ASSOC);
+	}
+}
+
+
+
+
+dans un autre fichier type index ou on appel le pdo 
+
+
+$data = new Database();
+//creation de l'objet pdo 
+
+$users = $data->query('SELECT * FROM users', [] )
+
+premier argument peut etres mit sur plusieurs ligne
+le deuxiéme argument s'il s'agit du paramtré par default est optionnel mais permet de l'indiquer et de ne pas avoir d'hésitation
+
+
+
+
+

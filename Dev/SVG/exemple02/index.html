@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>svg</title>
+</head>
+<style>
+    svg {
+
+        border: 1px solid black;
+
+    }
+</style>
+<body>
+    <h1>svg</h1>
+
+    <svg width="600" height="750" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <!-- x, y = sa position par rapport au svg, stroke=couleur, fill=remplissage -->
+
+        <rect x="10" y="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5" />
+        <!-- carre -->
+
+        <rect x="60" y="10" width="70" height="30" stroke="black" fill="transparent" stroke-width="5" />
+        <!-- rectangle  -->
+
+        <rect x="160" y="10" rx="10" ry="10" width="70" height="30" stroke="black" fill="transparent" stroke-width="5"/>
+        <!-- recatngle aux bord arrondis -->
+
+        <rect x="260" y="10" width="70" height="30" stroke="black" fill="transparent" stroke-width="5" />
+        <rect x="260" y="10" rx="10" ry="10" width="70" height="30" stroke="black" fill="transparent" stroke-width="5"/>
+        <!-- FUSION -->
+
+        <circle cx="75" cy="75" r="20" stroke="red" fill="transparent" stroke-width="5"/>
+        <!-- cercle -->
+
+        <ellipse cx="175" cy="125" rx="100" ry="35" stroke="red" fill="transparent" stroke-width="5"/>
+        <!-- elispse -->
+
+        <polygon points="150 215, 200 300, 100 300" stroke="yellow" fill="green" stroke-width="3"/>
+        <!-- polygon permet de faire des formes géométrique -->
+
+        <polygon points="350 460, 355 480, 370 480, 360 490, 365 505, 350 495, 335 505, 340 490, 330 480, 345 480" stroke="orange" fill="transparent" stroke-width="5"/>
+        <!-- etoile -->
+
+        <line x1="500" x2="50" y1="500" y2="550" stroke="orange" fill="transparent" stroke-width="5"/>
+        <!-- ligne -->
+    </svg>
+</body>
+
+</html>

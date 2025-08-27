@@ -1,0 +1,18 @@
+il faut créer 3 pages 3 controllers et 3 views avec uniquement un index.php
+
+
+/index.php?page=home
+/index.php?page=login
+/index.php?page=register
+
+
+
+dossier controllers
+dossier www
+
+loginController.class.php
+loginView.phtml
+
+dossier library avec class database accessible partout
+
+

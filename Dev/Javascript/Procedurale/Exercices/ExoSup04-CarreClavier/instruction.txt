@@ -1,0 +1,8 @@
+Exo 7 : Déplacer un carré grace au clavier
+Faire un programme qui affiche un carré et qui peut etre déplacé grace aux touches du clavier
+
+exemple : https://jsfiddle.net/61y88hke/ 
+
+
+
+( cliquez sur le carré avec votre souris puis utilisez les fleches du clavier ) 

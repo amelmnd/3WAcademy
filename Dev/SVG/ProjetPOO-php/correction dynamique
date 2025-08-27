@@ -1,0 +1,104 @@
+POur creer un lement de type rectangle en full object
+on crere le html
+
+
+pui la premierre calss que l'on fait c'es le programme qui est censser dessine les string 
+
+on a besoin dans le programm d'un rectangle
+	private $rectangle;
+
+on fait passer un contructeur 
+
+    public function __construct(Rectangle $rectangle) {
+        => objet obligatoirement intancier avec la class rectangle : on type les elemnt passer en agument, ce qui ls force a etres d'etres d'un ceratin type de class 
+
+on doit creer un rectangle 
+	public function drawRectangle() {
+    
+    
+    
+    }
+aavnt on va creer une class shape qui va contenir toutes les caractéristqiues de toutes les formes 
+
+on creer une class qui poura tres heriterr par toutes les class nefant qui en on besoin 
+
+abstract class Shape {
+
+	private $x;
+    private $y;
+    private $fill;
+    private $opacity;
+
+abstract est une class qui nes peut etres utiliser que pour l'heritage = c'est une classgénéreraliste qui va etres uniquement utiliser pour l'heritage utiliser dans un code strict, elle ne peut creer une forme elle meme 
+
+abstract class Shape {
+
+	private $x;
+    private $y;
+    private $fill;
+    private $opacity;
+    
+    
+     public function __construct($x, $y, $fill, $opacity)
+	{
+    	$this->x = $x;
+		$this->y = $y;
+        $this->fill = $fill;
+		$this->opacity = $opacity;
+    }
+        public function getPosition() {
+		return [
+			'x'=> $this->x,
+			'y' => $this->y
+		];
+	}
+
+	public function getStyle() {
+		return [
+			'fill'=> $this->fill,
+			'opacity' => $this->opacity
+		];
+	}
+
+organisation avec position et style, mais on peut faire une méthde par elemnt ou une methode qui contient toutes les caractéristique, on peut utiliser un tableau assoociatif et plien d'autre facon d'organisation 
+    
+}
+
+
+on creer la cass rectangle qui herite de la class shape 
+
+class Rectangle extends Shape {
+=> extend pour l'héritage
+
+on doit rajouter une width et une height a shape poour optenir un rectangle 
+on aura besoin de toutes ces information au momnet de l'intanciation 
+
+    public function __construct($x, $y, $width, $height, $fill, $opacity)
+	{
+    	parent::__construct($x, $y, $fill, $opacity);
+        => élément récupérer d'un parent 
+   	    $this->width = $width;
+		$this->height = $height ;
+        => elemnt ajouter 
+	}
+creation d'une fonction public get size
+
+
+
+dans index on include  toute les class dans le bonne ordre
+
+dans index on instancie le rectangle et on instancie un programme qui va creer un rectangle 
+
+on doit maintenant dessiner le rectangle grace a programm 
+		$size = $this->rectangle->getSize(); // ['width' =>200,'height' => 100];
+    	$position = $this->rectangle->getPosition();
+		$style = $this->rectangle->getStyle();
+    on obtient toute les information qu'il faut maintenant intégrer a une string 
+
+mainten,t on peut instancier dans index le rectangle puis apres on peut l'intégrer au phtml
+
+
+fonction cntructeur donne des valeur au attribut 
+getter eux mette en public les attributs pour les utiliser en dehors de la fonction 
+
+on instancie une seul fois programm car il conteint tous les élément pour creer les formes 

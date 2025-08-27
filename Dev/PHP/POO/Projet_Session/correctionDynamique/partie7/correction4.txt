@@ -1,0 +1,40 @@
+on envoie un mail pour plus de securité on ne faitpas de redirection
+
+on include tous ce dont on a besoin 
+on fait un formulaire et on creer un mail d'information 
+
+on test si le mail est bon ou pas 
+puis s'il est partie
+le frmulaire renvoi sur sa meme page 
+
+on creer alor une fonction dans l'objet User
+
+    public function sendMailForChangePassword($email) {
+    
+
+
+    	if ($user != false) {
+        	$message = 'Cliquez sur le lien :<a href=changePassword.php?id="'.$user['psw'].'">cliquez ici</a>';
+        
+        }
+    
+    }
+    on fait une requete basqiue on recupére les info du mail et si le mail est bon on fait un message qui contient un lien html et on utilise le passeword cripter comme id 
+    
+            	mail('thibaut.monesma@gmail.com', 'change password', $message);
+puis on envoi la mail 
+
+            return 'yes';
+    change la valeur du test 
+
+    } else {
+
+			return 'no';
+
+		}
+}
+
+
+dans le fichier ou il est possibble de cvhanger le mot de passe on verifie le valeur on creer un nouvel user et on fat passer 	
+
+$test = $user->sendMailForChangePassword($_POST['email']);

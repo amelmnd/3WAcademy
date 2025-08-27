@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Commandes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="conteneur">
+        <h1>Bons de commande</h1>
+        <p><a href="index.php">Retouner à l'accueil</a></p>
+
+
+        <h2>Bon de commande <?=$_GET['orderNumber']?>    </h2>
+
+        <div>
+            <p><?= $customer['contactFirstName']?> <?= $customer['contactLastName']?></p>
+            <p><?= $customer['addressLine1']?></p>
+            <p><?= $customer['addressLine2']?></p>
+            <p><?= $customer['city']?></p>
+        </div>
+        
+        <hr>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th><h2>Produit</h2></th>
+                    <th><h2>Prix unitaire</h2></th>
+                    <th><h2>Quantité</h2></th>
+                    <th><h2>Prix initial</h2></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($commandes as $value){?>
+                <tr>
+                    <td><?= $value['productName']?></td>
+                    <td><?= $value['quantityOrdered']?> €</td>
+                    <td><?= $value['priceEach']?></td>
+                    <td><?= $value['totalPrice']?> €</td>
+
+                </tr>
+                <?php }?>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Montant Total HT</td>
+                    <td><?= $HTprice?> €</td>
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>TVA (20 %)</td>
+                    <td><?= $TVA?> €</td>
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Montant Total TTC</td>
+                    <td><?= $TTCprice?> €</td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
