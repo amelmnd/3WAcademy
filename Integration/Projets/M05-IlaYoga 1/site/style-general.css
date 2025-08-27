@@ -1,0 +1,91 @@
+/* GENERAL */
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0; 
+    padding: 0;
+    color: #3d4959;
+    line-height: 30px;
+    font-size: 1em;
+    font-family: 'Playfair Display', serif;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+nav, h1{
+    font-family: 'Kaushan Script', sans-serif;
+}
+h2{
+    font-weight: 100;
+
+}
+article{
+    margin-top: 50px;
+
+}
+/* NAV */
+header{
+    background-image: url(img/fond.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+nav{
+    text-align: center;
+    font-size: 1.5em;
+    background: rgba(255, 255, 255, .3);
+}
+nav p{
+    list-style: none;
+    display: inline-block;
+    padding: 30px;
+}
+nav p a{
+    color: #fff;
+    text-decoration: none;
+}
+nav p i{
+    color: #fff;
+}
+header span{
+    text-transform: uppercase;
+}
+.color{
+    text-align: center;
+    background: rgba(255, 255, 255, .1);
+    color: #fff;
+    margin: 0;
+    font-weight: bold;
+}
+header h1{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 350px;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: grey 1px 0 10px;
+}
+/*FOOTER*/
+#pieddepage{
+    font-size: 10px;
+    text-align: center;
+    padding: 20px;
+    background-image: url(img/background_section.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+#pieddepage img{
+    width: 50px;
+}
+#pieddepage a, #pieddepage p{
+    color: #fff;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.5em;
+
+}

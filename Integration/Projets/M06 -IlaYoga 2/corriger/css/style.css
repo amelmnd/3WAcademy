@@ -1,0 +1,257 @@
+/*  VISUALISATION DES BLOCS  */
+
+	/*div, header, section, article, aside, nav {
+		border: 1px dashed rgba(0,0,0,0.15);
+		background-color: rgba(0,0,0,0.05);
+	}*/
+
+	/*.clear {
+		border: 1px dashed red;
+	}*/
+
+/*GLOBAL */
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+body {
+	font-family: "Playfair Display", serif;
+	font-size: 1em;
+	margin: 0;
+	color: #34495E;
+	line-height: 1.8;
+}
+
+a {
+	color: #8A62C2;
+	text-decoration: none;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+	text-align: center;
+}
+
+hr {
+	height: 1px;
+	border: 0;
+	background-color: #EACEE4;
+	margin: 50px;
+}
+
+.clear {
+	overflow: auto;
+}
+
+/* NAV */
+nav {
+	text-align: center;
+	background-color: rgba(255,255,255,0.3);
+	padding: 25px;
+}
+
+nav a {
+	text-align: center;
+	font-size: 1.5em;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 50px;
+	color: white;
+	font-family: "Kaushan Script";
+
+}
+
+nav a .fa {
+	display: block;
+}
+
+/* HEADER */
+header {
+	background-image: url(../img/fond.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.presentation {
+	color: white;
+	padding: 50px 0 300px;
+	text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+	font-family: "Kaushan Script";
+}
+
+.presentation h1 {
+	font-size: 4em;
+}
+
+/* MAIN */
+.promo {
+	background-color: rgba(255,255,255,0.15);
+	padding: 5px;
+	margin: 0;
+	text-align: center;
+	color: white;
+	font-size: 1.2em;
+}
+
+.promo strong {
+	font-weight: normal;	
+}
+
+.about {
+	padding: 50px;
+}
+
+.left {
+	float: left;
+	margin-right: 25px;
+}
+
+.right {
+	float: right;
+	margin-left: 25px;
+}
+
+.description {
+	background-color: #8A62C2;
+	background-image: url(../img/background_section.jpg);
+	background-size: cover;
+	background-position: left bottom;
+	color: white;
+	line-height: 2;
+}
+
+.description article {
+	display: inline-block;
+	width: 30%;
+	margin: 1%;
+	padding: 2%;
+	text-align: center;
+}
+
+.description img {
+	width: 200px;
+}
+
+iframe {
+	width: 100%;
+}
+
+
+/* SECTION VOYAGE */
+caption {
+	font-size: 2em;
+	margin: 25px 0;
+}
+
+table {
+	width: 90%;
+	border-collapse: collapse;
+	margin: 0 auto 25px;
+}
+
+table thead {
+	font-family: "Kaushan Script";
+	font-weight: normal;
+	font-size: 1.6em;
+	background-color: #C4A9DF;
+	border: 1px solid #C4A9DF;
+	color: white;
+	padding: 10px;
+}
+
+/* Pour faire l'effet d'un background une ligne sur deux, plutot que de rajouter
+une class, nous pouvons ajouter une pseudo-class que nous verrons plus tard en cours */
+table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+table tr:nth-child(odd) {
+	background-color: #FAFAFA;
+}
+
+table tr:first-child {
+	background-color: inherit;
+}
+table th {
+	text-align: left;
+	font-weight: normal;
+	padding: 10px 25px;
+}
+
+table tr td {
+	padding: 10px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+table tr td:first-child {
+	text-align: left;
+}
+
+/* SECTION INFO */
+legend {
+	font-size: 1.5em;
+}
+
+fieldset {
+	border: 1px solid #dedede;
+}
+
+#info form {
+	text-align: center;
+	width: 90%;
+	margin: 0 auto;
+}
+
+#info fieldset {
+	margin: 25px 0;
+}
+
+#info li {
+	display: inline-block;
+}
+
+#info form input[type=text] {
+	border: 0;
+	border-bottom: 1px solid #dedede;
+	background-color: white;
+	padding: 5px;
+	width: 50%;
+}
+ #info label {
+	 margin-left: 25px;
+ }
+
+#info form select {
+	padding: 10px;
+	margin: 2.5%;
+	width: 95%;
+}
+
+button {
+	background-color: #8A62C2;
+	color: white;
+	padding: 10px 25px;
+	border: 0;
+	margin-bottom: 25px;
+}
+
+
+/* FOOTER */
+.licence a {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.licence {
+	background-color: #8B76D2;
+	padding: 10px;
+	color: white;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+.licence img {
+    width: 50px;
+}

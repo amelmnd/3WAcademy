@@ -1,0 +1,27 @@
+@import "config.scss";
+
+
+.mainListing_article-tea {
+    @include fondPart;
+
+    h2{
+        color: $colorGeen;
+    }
+    img{
+        float: left;
+    }
+}
+.mainListing_div-tea-chose {
+    @include flexM;
+    img{
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .mainListing_div-tea-chose {
+        flex-direction: column;
+    }
+}

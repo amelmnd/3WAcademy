@@ -1,0 +1,251 @@
+@font-face {
+  font-family: "Bodega Sans";
+  src: url("../fonts/BodegaSans_Black.ttf");
+}
+
+@font-face {
+  font-family: "flexslider-icon";
+  src: url("../fonts/flexslider-icon.ttf");
+}
+
+/* ************* VARIABLE ************* */
+/* ************* MIXIN ************* */
+/* ************* CODE ************* */
+body {
+  background: url(../img/bg_body.svg) #444;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+.conteneur {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-image: linear-gradient(120deg, #fff 50%, #3f3f3f 50%);
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  font-size: 2.5rem;
+  font-family: "Bodega Sans", sans-serif;
+  line-height: 2em;
+  text-align: center;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header img {
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Bodega Sans", sans-serif;
+  font-weight: inherit;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+span {
+  color: #ff9d00;
+}
+
+h2 {
+  border: solid 3px #3f3f3f;
+  border-bottom: none;
+  border-right: none;
+  font-size: 3rem;
+  padding: 10px;
+}
+
+h3 {
+  color: #ff9d00;
+  border-bottom: 1px solid #ff9d00;
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 2.5rem;
+  color: grey;
+}
+
+.motos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+article {
+  background: #fff;
+  padding: 15px;
+  width: 20%;
+  text-align: center;
+}
+
+article > img {
+  width: 95%;
+}
+
+.button {
+  display: block;
+  background: #ff9d00;
+  text-decoration: none;
+  line-height: 3em;
+  color: #fff;
+}
+
+.nousconaitre:not(h2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nousconaitre > div {
+  width: 50%;
+  color: #fff;
+}
+
+.nousconaitre > div > div,
+i {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 2.5rem;
+}
+
+video {
+  width: 100%;
+  margin: 20px;
+}
+
+footer {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 30px;
+}
+
+footer nav a {
+  color: #fff;
+}
+
+.flex-direction-nav {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-image: linear-gradient(153deg, #fff 50%, #3f3f3f 50%);
+  }
+  header > nav {
+    width: 100%;
+    text-align: right;
+  }
+  .motos {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  article {
+    width: 45%;
+    margin: 10px auto;
+  }
+  .nousconaitre {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nousconaitre > div {
+    width: 100%;
+    text-align: center;
+  }
+  .nousconaitre > div > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-image: linear-gradient(128deg, #fff 50%, #3f3f3f 50%);
+  }
+  header img {
+    width: 70%;
+    margin: 0;
+  }
+  header nav {
+    font-size: 2rem;
+  }
+  .motos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  article {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */

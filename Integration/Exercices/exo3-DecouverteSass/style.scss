@@ -1,0 +1,20 @@
+/* Grille à disposition */
+@for $i from 2 through 12 {
+    .grid-#{$i} {
+        display: flex;
+    }
+
+    .grid-#{$i}>* {
+        width: 100%/$i
+    }
+}
+
+$colorred: red;
+$background: green;
+h1{
+    color: $colorred;
+}
+h2{
+    background-color: $background;
+    color: gray;
+}

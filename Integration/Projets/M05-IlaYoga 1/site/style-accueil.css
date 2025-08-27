@@ -1,0 +1,55 @@
+
+/* 1ER SECTION */
+
+.section1{
+    padding: 20px;
+}
+.section1>article{
+    padding: 20px;
+}
+.section1>article:nth-child(1){
+    margin-bottom: 20px;
+}
+.corps article h2{
+    text-align: center;
+    margin-top: -20px;
+}
+.yogacours{
+    float: left;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+hr{
+    clear: both;
+    width: 90%;
+}
+.yogaposture{
+    float: right;
+    margin: 25px;
+}
+/* 2EME SECTION */
+.colorviolet{
+    background-image: url(img/background_section.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: #fff;
+    padding: 30px;
+}
+.colorviolet>article{
+    max-width: 33%;
+    float: left;
+    display: inline-block;
+    text-align: center;
+}
+.colorviolet>article>p{
+    text-align: center;
+    margin: 20px 60px;
+}
+.colorviolet img{
+    width: 200px;
+}
+iframe {
+    display: block;
+}
+

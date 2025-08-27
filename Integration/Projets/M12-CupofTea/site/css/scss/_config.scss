@@ -1,0 +1,120 @@
+/* ******* VAR ******* */
+$colorWhite : #fff;
+$colorGeen: #94af30;
+$txtTransforme : uppercase;
+
+
+/* ******* MIXIN ******* */
+@mixin greenTxtCenter {
+    text-align: center;
+    color: $colorGeen;
+}
+
+@mixin flexM {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin buttonProduct {
+    width: 70%;
+    background-color: #b09067;
+    padding: 10px;
+    text-transform: $txtTransforme;
+    text-decoration: none;
+    color: $colorWhite;
+}
+
+@mixin fondPart {
+    background-color: $colorWhite;
+    margin: 20px 0;
+    padding: 20px;
+    padding-bottom: 40px;
+}
+
+@mixin borderTitle {
+    border-bottom: 1px solid;
+    height: 0.6em;
+}
+
+@mixin withFond {
+    background: #fff;
+    padding: 0 10px;
+}
+
+/* ******* CODE ******* */
+@font-face {
+    font-family: "flexslider-icon";
+    src: url("../fonts/flexslider-icon.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: grey;
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Amaranth', sans-serif;
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.conteneur {
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.header,
+footer {
+    background-image: url(../img/bg.jpg);
+    color: #fff;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button-see-product {
+    text-align: center;
+    margin: 0 auto;
+
+    span {
+        font-weight: bold;
+    }
+
+    a {
+
+        @include buttonProduct
+    }
+}
+.borderBar{
+    @include borderTitle;
+}
+.borderBar span{
+    @include withFond;
+}

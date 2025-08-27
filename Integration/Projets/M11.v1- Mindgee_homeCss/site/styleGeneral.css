@@ -1,0 +1,139 @@
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+.containeur {
+    width: 90%;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    color: grey;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Candal', sans-serif;
+    color: #213e4e;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3{
+    font-size: 1.2em;
+}
+
+a {
+    font-family: 'Candal',
+        sans-serif;
+    text-decoration: none;
+}
+
+/* NAV */
+header {
+    padding: 80px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.4em;
+
+
+}
+
+header>img {
+    width: 150px;
+}
+
+.fas {
+    display: block;
+    color: #fb8b9b;
+}
+
+header>a {
+    color: #213e4e;
+    text-align: center;
+    padding-top: 60px;
+    font-weight: normal;
+
+}
+
+/* SEARCH BAR */
+form{
+    background: #fb8b9b;
+    text-transform: uppercase;
+    color:rgba(255,255,255, 0.7);
+    padding: 20px;
+    padding-left: 50px;
+}
+input[type="search"]{
+    border: none;
+        background: #fb8b9b;
+width: 50%;
+
+}
+/* FOOTER */
+footer {
+    background: #213e4e;
+    display: flex;
+    justify-content: space-around;
+    padding: 60px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    margin: 30px;
+}
+
+.pagefoot {
+    background: #213e4e;
+    text-align: center;
+    padding-bottom: 50px;
+
+}
+
+.pagefoot img {
+    width: 50px;
+}
+
+.pagefoot a {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+
+}
+
+@media screen and (max-width: 960px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header>img {
+        margin: 0 auto;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}

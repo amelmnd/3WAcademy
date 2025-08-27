@@ -1,0 +1,49 @@
+@import "config.scss";
+.mainAbout{
+    @include fondPart;
+    margin: 20px auto;
+}
+.mainAbout_section-team{
+    h2{
+        color: $colorGeen;
+    }
+    img{
+        margin: 15px;
+    }
+    .amelie{
+        float: left;
+    }
+    .xavier {
+        float: right;
+    }
+}
+.mainAbout_div-concept{
+    @include flexM;
+    text-align: center;
+    background-color: #eaefcf;
+            padding: 10px;
+
+    div{
+            padding: 10px;
+    }
+    img{
+        width: 33%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .mainAbout_section-team{
+        .amelie {
+            float: none;
+            width: 100%;
+        }
+
+        .xavier {
+            float: none;
+            width: 100%;
+
+        }
+    }
+    .mainAbout_div-concept{
+        flex-direction: column;
+    }
+}

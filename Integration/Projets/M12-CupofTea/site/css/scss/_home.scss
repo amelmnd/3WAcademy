@@ -1,0 +1,66 @@
+@import "config.scss";
+
+.mainHome {
+    h1 {
+        @include greenTxtCenter;
+    }
+
+    h2 {
+        @include greenTxtCenter;
+    }
+
+    .mainHome_section-tea {
+        @include flexM;
+        background-color: $colorWhite;
+        text-align: center;
+        margin: 20px 0;
+        padding: 20px;
+    }
+}
+
+.mainHome_p-sub-text {
+    text-align: center;
+    font-size: 10px;
+}
+
+.mainHome_article-tea-chose {
+    background-color: $colorWhite;
+    margin: 20px 0;
+    padding: 20px;
+
+}
+
+.mainHome_div-tea-chose:hover img {
+    opacity: 0.5;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.mainHome_div-tea-chose {
+    @include flexM;
+    text-align: center;
+    flex-wrap: wrap;
+    a{
+        text-decoration: none;
+        color: grey;
+    }
+}
+.flexslider{
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .mainHome_section-tea {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .mainHome-header,
+    .flexslider {
+        display: none
+    }
+}

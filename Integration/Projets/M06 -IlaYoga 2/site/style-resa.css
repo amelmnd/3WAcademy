@@ -1,0 +1,113 @@
+/* GENERAL */
+.corps {
+    font-size: 1em;
+    font-family: 'Playfair Display', serif;
+    color: #4d4c4c;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.9em;
+    font-weight: 100;
+}
+h2:nth-of-type(1){
+    padding-top: 40px;
+}
+h3 {
+    text-align: center;
+    font-size: 1.3em;
+        font-weight: 100;
+
+}
+article{
+    margin: 10px;
+}
+/*  TABLEAU   */
+table {
+    border-collapse: collapse;
+    width: 90%;
+    line-height: 3em;
+    margin: 0 auto;
+}
+
+th,
+td {
+    border: 1px solid #cbcbcb;
+
+}
+thead {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1.6em;
+    text-align: left;
+    background: #c4a5de;
+    color: #fff;
+}
+
+thead>tr>th {
+    font-weight: 100;
+    padding: 10px 25px;
+}
+
+td:not(.first) {
+    text-align: center;
+}
+
+td>a {
+    color: #a696d6;
+    text-decoration: none;
+}
+
+tbody>tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.first {
+    padding-left: 10px;
+}
+
+/* FORMULAIRE */
+form {
+    width: 90%;
+    line-height: 3em;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 1px solid #cbcbcb;
+    text-align: center;
+}
+
+legend {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+input[type=text],
+input[type=email] {
+    width: 10%;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #cbcbcb;
+    border-left: none;
+
+}
+label {
+    margin-left: 20px;
+}
+select{
+    background: #fff;
+    width: 90%;
+    border: 1px solid #cbcbcb;
+    margin: 25px;
+}
+button{
+    background: #8A5BBC;
+    width: 100px;
+    border: none;
+    padding: 10px;
+    color: #fff;
+
+}
+form>p{
+    text-align: center;
+}

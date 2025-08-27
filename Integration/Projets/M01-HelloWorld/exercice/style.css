@@ -1,0 +1,41 @@
+.ligne{
+    border:1px solid gray;
+}
+.boldfont{
+    font-weight: bold;
+}
+.fontarial{
+    font-family: Arial, sans-serif;
+}
+.redfont{
+    color: red;
+}
+.bluefont{
+    color: blue;
+}
+.greenfont{
+    color: green;
+}
+.fontmono{
+    font-family: monospace, sans-serif;
+}
+.backred{
+    background: red;
+}
+.backblue{
+    background: blue;
+}
+.backgreen{
+    background: green;
+}
+.SQL{
+    width: 300px;
+    height: 225px;
+}
+#pieddepage{
+    font-size: 10px;
+    text-align: center;
+}
+#pieddepage img{
+    width: 30px;
+}

@@ -1,0 +1,115 @@
+/*  GENERALE    */
+body{
+    background: url("img/fond.png");
+    color: #746d67;
+    font-family: sans-serif;
+    margin: 0;
+}
+.conteneur{
+    width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    line-height: 20px;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* NAV */
+.header{
+    background: #B7CA3C;
+    font-family: "Oswald";
+}
+h1{
+    float: left;
+}
+.header ul{
+    text-align: right;
+    margin-top: 0;
+}
+
+.header li{
+    list-style: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 30px;
+    margin-top: 30px;
+    line-height: 3em;
+    font-size: 1.3em;
+    padding-bottom: 50px;
+
+}
+.header li a{
+    color: #2E4828;
+    font-weight: lighter;
+
+}
+.corps{
+    clear: both;
+    padding: 15px;
+}
+/* FOOTER */
+
+#pieddepage{
+    font-size: 10px;
+    text-align: center;
+    margin: 20px;
+}
+#pieddepage img{
+    width: 50px;
+}
+#pieddepage p{
+    margin: 0;
+}
+
+/*  ACCUEIL */
+h2{
+    color: #B7CA3C;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: "Oswald";
+    font-weight: lighter;
+}
+i{
+    margin: 15px;
+}
+.flote{
+    float: left;
+    margin: 15px;
+    width: 200px;
+}
+p{
+    line-height: 23px;
+}
+.button{
+    background:  #B7CA3C;
+    width: 85px;
+    padding: 7px;
+    margin-left: 85%;
+}
+.button a{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+/*  CONTACT US*/
+.contact a{
+    text-decoration: none;
+    color: #B7CA3C;
+}
+
+/*  GALERY  */
+.imggalery{
+    margin: 0 auto;
+
+}
+.imggalery img{
+    float: left;
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+    margin: 30px;
+
+}

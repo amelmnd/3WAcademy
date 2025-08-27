@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Module 12 - Cup of Tea</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- CSS Vendor -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/flexslider.css">
+		<!-- CSS Perso -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Perso JS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/jquery.flexslider-min.js"></script>
+		<script>
+			$(window).on('load', function() {
+				$('.flexslider').flexslider({
+					directionNav: true,
+					controlNav: true
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!--HEADER-->
+		<header>
+			<img class="ribbon" src="img/ribbon.svg" alt="élu meilleur thé en 2016" />
+			<section id="topbar">Livraison offerte à partir de 65€ d'achat !</section>
+			<div class="container">
+				<section id="logo">
+					<a href="index.html">
+						<img src="img/logo.png" alt="Logo de Cup of Tea" />
+					</a>
+					<section id="cart">
+						<span>Mon panier</span>
+						<strong>42,00€</strong>
+					</section>
+				</section>
+				<nav>
+					<a href="listing-product.html">Thés</a>
+					<a href="#">Grands crus</a>
+					<a href="#">Accessoires</a>
+					<a href="#">Epicerie</a>
+					<a href="about.html">Notre histoire</a>
+				</nav>
+			</div>
+		</header>
+		<!--MAIN CONTENT-->
+		<main class="container">
+			<section id="noel">
+				<h1>C'est noël chez Cup of Tea, profitez-en !</h1>
+				<img src="img/offre-noel.jpg" alt="Offre spéciale pour noel ! Dès 45€ d'achat, le photophore de noël vous sera offert. Et dès 85€ un thé vert au prune et coing de 100 gramme vous sera offert" />
+				<small>Pour toute commande effectuée avant le 20 décembre</small>
+			</section>
+			<section id="slider">
+				<div class="flexslider">
+					<ul class="slides">
+						<li><img src="img/slider/1.jpg" alt="Retrouvez toute nos idées cadeaux pour les fêtes de noël" /></li>
+						<li><img src="img/slider/2.jpg" alt="Retrouvez toute la collection des thés numéro 25 et notre nouvelle édition limitée" /></li>
+					</ul>
+				</div>
+			</section>
+			<section id="categorie">
+				<h2><span>Choisissez votre thé</span></h2>
+				<a href="#">
+					<img src="img/tea/1.jpg" alt="Tasse de thé noir" />
+					<h3>Thé noir</h3>
+				</a>
+				<a href="#">
+					<img src="img/tea/2.jpg" alt="Tasse de thé vert" />
+					<h3>Thé vert</h3>
+				</a>
+				<a href="#">
+					<img src="img/tea/3.jpg" alt="Tasse de oolong" />
+					<h3>Oolong</h3>
+				</a>
+				<a href="#">
+					<img src="img/tea/4.jpg" alt="Tasse de thé blanc" />
+					<h3>Thé blanc</h3>
+				</a>
+				<a href="#">
+					<img src="img/tea/5.jpg" alt="Tasse de rooibos" />
+					<h3>Rooibos</h3>
+				</a>
+			</section>
+			<section id="tea">
+				<article id="new">
+					<h2><span>Notre nouveauté</span></h2>
+					<img src="img/product/product1.jpg" alt="Thé du Hammam" />
+					<h3>Thé du hammam</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<section class="price">
+						<p>À partir de <strong>8,50€</strong></p>
+					</section>
+					<a class="btn" href="#">Voir ce produit</a>
+				</article>
+				<article id="best">
+					<h2><span>Notre best-seller</span></h2>
+					<img src="img/product/product2.jpg" alt="Infustion Herboriste" />
+					<h3>Infusion Herboriste</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<section class="price">
+						<p>À partir de <strong>7,60€</strong></p>
+					</section>
+					<a class="btn" href="#">Voir ce produit</a>
+				</article>
+				<article id="crush">
+					<h2><span>Notre coup de coeur</span></h2>
+					<img src="img/product/product3.jpg" alt="Blue of London" />
+					<h3>Blue of London</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<section class="price">
+						<p>À partir de <strong>9,00€</strong></p>
+					</section>
+					<a class="btn" href="product.html">Voir ce produit</a>
+				</article>
+			</section>
+		</main>
+		<!--FOOTER-->
+		<footer>
+			<section id="info">
+				<article>
+					<i class="fa fa-lock"></i>
+					<small>Paiement sécurisé</small>
+				</article>
+				<article>
+					<i class="fa fa-truck"></i>
+					<small>Ma livraison offerte</small>
+				</article>
+				<article>
+					<i class="fa fa-money"></i>
+					<small>Carte de fidélité</small>
+				</article>
+				<article>
+					<i class="fa fa-phone"></i>
+					<small>Service client</small>
+				</article>
+				<article>
+					<i class="fa fa-check-circle"></i>
+					<small>Garantie qualité</small>
+				</article>
+			</section>
+			<section id="bottombar">
+				<article>
+					<h2>Découvrir Cup of Tea</h2>
+					<ul>
+						<li>Notre histoire</li>
+		    			<li>Nos boutiques</li>
+		    			<li>Le Thé de A à Z</li>
+		    			<li>Espace clients professionnels</li>
+		    			<li>Recrutement</li>
+		    			<li>Contactez-nous !</li>
+		    			<li>L'École du Thé</li>
+					</ul>
+				</article>
+				<article>
+					<h2>Commandez en ligne</h2>
+					<ul>
+						<li>Première visite</li>
+		    			<li>Aide - FAQ</li>
+		    			<li>Service client</li>
+		    			<li>Suivre ma commande</li>
+		    			<li>Conditions générales de vente</li>
+		    			<li>Informations légales</li>
+					</ul>
+				</article>
+				<article>
+					<h2>Suivez-nous !</h2>
+					<ul>
+						<li>Notre histoire</li>
+		    			<li>Nos boutiques</li>
+		    			<li>Le Thé de A à Z</li>
+		    			<li>Espace clients professionnels</li>
+					</ul>
+				</article>
+			</section>
+			<small id="licence">
+				   <a rel="license" href="https://3wa.fr/propriete-materiel-pedagogique/"><img alt="Propriété de la 3W Academy" style="border-width:0" src="https://3wa.fr/wp-content/themes/3wa2015/img/logos/big.png" /></a><br /><span>Cet exercice</span> de <a href="https://3wa.fr">3W Academy</a> est mis à disposition <a rel="license" href="https://3wa.fr/propriete-materiel-pedagogique/">pour l'usage personnel des étudiants, Pas de Rediffusion - Attribution - Pas d'Utilisation Commerciale - Pas de Modification - International</a>.<br />Les autorisations au-delà du champ de cette licence peuvent être obtenues auprès de <a href="mailto:contact@3wa.fr" rel="cc:morePermissions">contact@3wa.fr</a>. Les maquettes ont été réalisées par <a href="http://www.justine-muller.fr">Justine Muller</a>.
+			</small>
+		</footer>
+	</body>
+</html>

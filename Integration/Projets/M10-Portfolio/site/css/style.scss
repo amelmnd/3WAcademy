@@ -1,0 +1,313 @@
+/* ******** Var */
+$colorDarkGrey: #808080;
+$colorGrey : #E9EAEC;
+$colorPink : #F8315A;
+$borderGrey: 1px solid #E9EAEC;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/fond.png);
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sizingMax {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* MIXIN */
+@mixin backgroudImageFrom {
+    background-position: 10px;
+    background-size: 2.5em;
+    background-repeat: no-repeat;
+}
+
+/*
+p: 18px nav : 20px logo et h1 : 40px 
+h2 : 35px h3 des compétences : 30px icone : 25px input et textarea : 16px
+*/
+h1 {
+    color: $colorDarkGrey;
+    font-size: 40px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 35px;
+    text-align: center;
+    color: $colorPink;
+    border-bottom: $borderGrey;
+    line-height: 2em;
+}
+
+h3 {
+    color: $colorPink;
+
+}
+
+p {
+    font-size: 18px;
+    color: $colorDarkGrey;
+}
+
+a {
+    text-decoration: none;
+    color: $colorDarkGrey;
+    font-size: 20px
+}
+
+
+/****** HEADER *********/
+header {
+    padding: 70px;
+}
+
+header,
+header>div:nth-of-type(1) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+
+}
+
+.logo {
+    width: 40px;
+}
+
+nav {
+    width: 30%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+/***** ACCUEIL ******/
+#accueil {
+    background-image: url(../img/bg_header.png);
+    background-size: cover;
+    line-height: 2em;
+    padding: 100px;
+}
+
+#accueil h2 {
+    color: white;
+    text-align: center;
+    border: none;
+}
+
+#accueil p {
+    color: white;
+    text-align: center;
+}
+
+.buttonDiscovert {
+    width: 10rem;
+    background: $colorPink;
+    border-radius: 5px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+/***** SERVICES ******/
+h3 .fas {
+    color: $colorDarkGrey;
+    width: 3em;
+    line-height: 3em;
+    background: rgba(233, 234, 236, 0.3);
+    border: $borderGrey;
+    border-radius: 100%;
+    margin: 30px;
+}
+
+/***** COMPETENCES ******/
+#skills>div,
+#services>div {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#skills span {
+    font-size: 30px;
+}
+
+/***** REALISATION *****/
+#realisation>div:nth-of-type(odd)>img {
+    width: 50%;
+    float: right;
+}
+
+#realisation>div:nth-of-type(even)>img {
+    width: 50%;
+    float: left;
+}
+
+#realisation h3 {
+    margin-top: 40px;
+}
+
+#realisation a {
+    color: $colorPink;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/*****  FORM *****/
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+form p {
+    border: 1px solid $colorGrey;
+    border-radius: 50px;
+    margin: 10px;
+    padding: 10px;
+    line-height: 2em;
+}
+
+input {
+    border: none;
+    background: none;
+    margin-left: 50px;
+    line-height: 20px;
+}
+
+.typeText {
+    background: url("../img/bg_form_name.svg");
+    @include backgroudImageFrom();
+    width: 46%;
+}
+
+.typeEmail {
+    background: url("../img/bg_form_mail.svg");
+    width: 46%;
+    @include backgroudImageFrom();
+}
+
+.typeTextarea {
+    background: url("../img/bg_form_message.svg");
+    @include backgroudImageFrom;
+    width: 100%;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    width: 100px;
+    padding: 10px;
+    margin: 15px;
+    color: #fff;
+}
+
+input[type="submit"] {
+    background: $colorPink;
+}
+
+input[type="reset"] {
+    background: $colorDarkGrey;
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    /****** ANIMATION ******/
+    .divLogo:hover .logo {
+        width: 50px;
+        transition: width 1s;
+
+    }
+
+    .divLogo:hover h1 {
+        color: $colorPink;
+        transition: color 1s;
+
+    }
+
+    nav a:hover {
+        color: $colorPink;
+        transform: translateY(20px);
+        transition: all 1s;
+    }
+
+    @keyframes animed {
+
+        0% {
+            transform: translateY(20px);
+        }
+
+        50% {
+            transform: translateY(0);
+
+        }
+
+        100% {
+            transform: translateY(20px);
+
+        }
+    }
+
+    #services h3:hover i {
+        animation-name: animed;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@media screen and (max-width: 960px) {
+
+    #skills>div,
+    #services>div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sizingMax {
+        padding: 20px;
+    }
+
+    #accueil {
+        padding: 10px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    nav {
+        width: 75%;
+        margin: 10px;
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    #realisation>div:nth-child(odd)>img,
+    #realisation>div:nth-child(even)>img {
+        float: none;
+        width: 100%;
+    }
+
+    .typeText,
+    .typeEmail {
+        width: 100%;
+    }
+
+}

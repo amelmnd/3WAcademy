@@ -1,0 +1,266 @@
+@font-face {
+	font-family: "Bodega Sans";
+	src: url("../fonts/BodegaSans_Black.ttf");
+}
+
+/* GLOBAL */
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {font-size: 62.5%}
+
+body {
+	font-family: "Open Sans", arial, sans-serif;
+	font-size: 1.6rem;
+	line-height: 2;
+	color: white;
+	background: #444;
+	background-image: url("../img/bg_body.svg");
+}
+
+h1, h2, h3 {
+	font-family: "Bodega Sans", arial, sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 4rem;
+	text-align: center;
+}
+
+.container {
+	max-width: 1500px;
+	padding: 25px;
+	margin: 0 auto;
+}
+
+.orange {
+	color: #FF9D00;
+}
+ul {
+	margin-left: -40px;
+}
+
+/* NAVIGATION */
+header {
+	background: -moz-linear-gradient(130deg, white 0%, white 50%, #333 50%, #333 100%);
+	background: -webkit-linear-gradient(130deg, white 0%, white 50%, #333 50%, #333 100%);
+	background: linear-gradient(130deg, white 0%, white 50%, #333 50%, #333 100%);
+	box-shadow: 0 0 25px rgba(0,0,0,0.2);
+}
+
+nav {
+	padding: 25px;
+	line-height: 1.5;
+	text-align: right;
+	font-family: "Bodega Sans", arial, sans-serif;
+}
+
+nav a {
+	display: block;
+	color: white;
+	font-size: 2.5rem;
+	text-decoration: none;
+	padding: 10px;
+}
+
+nav a:hover {
+	color: #FF9D00;
+}
+
+#logo {
+	float: left;
+}
+
+#logo img {
+	width: 100%;
+}
+
+/* SLIDER */
+.slider {
+	padding: 10px;
+	background-color: white;
+	margin: 50px auto 0;
+	box-shadow: 0 0 25px rgba(0,0,0,0.2);
+}
+
+.flexslider {
+	margin: 0;
+	border: 0;
+}
+
+/* ARTICLE */
+main h2 {
+	border-top: 3px solid rgba(0, 0, 0, 0.075);
+	border-left: 3px solid rgba(0, 0, 0, 0.075);
+	padding: 10px 30px;
+	font-size: 3rem;
+	margin: 50px 0 25px;
+	letter-spacing: 1px;
+}
+
+.work article {
+	background-color: white;
+	display: inline-block;
+	text-align: center;
+	width: 22%;
+	padding: 0 20px 20px;
+	color: #666;
+}
+
+.work article + article {
+	margin-left: 4%;
+}
+
+.work h3 {
+	font-weight: normal;
+	color:  #FF9D00;
+	border-bottom: 2px solid  #FF9D00;
+	margin: -10px 0 20px;
+	font-size: 2.5rem;
+}
+
+.work img {
+	max-width: 100%;
+	display: block;
+}
+
+.work a {
+	display: block;
+	width: 100%;
+	background-color: #FF9D00;
+	color: white;
+	margin-top: 10px;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.media article {
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.social {
+	margin-right: 1%;
+}
+
+.video {
+	margin-left: 1%;;
+	padding-top: 12px;
+}
+
+.social {
+	text-align: left;
+}
+
+.social i {
+	font-size: 5rem;
+	padding: 50px;
+	color: white;
+}
+
+.social i:hover {
+	color: #FF9D00;
+}
+
+.video video {
+	width: 100%;
+	margin: 0 auto;
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+/* FOOTER */
+footer {
+	color: rgba(255,255,255,0.75);
+	box-shadow: 0 0 25px rgba(0,0,0,0.2);
+	padding: 50px;
+	margin-top: 100px;
+	text-align: center;
+}
+
+footer ul li {
+	padding: 10px;
+	display: inline-block;
+}
+
+footer ul li a {
+	color: white;
+}
+
+footer div h2 {
+	margin: 0;
+}
+
+/* LICENCE */
+#licence {
+    display: block;
+    text-align: center;
+    padding: 25px;
+}
+
+#licence img {
+    width: 50px;
+}
+
+#licence a {
+	color: white;
+}
+
+
+@media screen and (max-width: 1024px) {
+	body {
+		padding: 25px;
+	}
+
+	.work article {
+		width: 90%;
+		margin: auto;
+		display: block;
+	}
+
+	.work article + article {
+		margin: 25px auto;
+	}
+	
+	.media article {
+		width: 100%;
+		margin: 0 auto;
+		display: block;
+		text-align: center;
+	}
+
+	.social i {
+		display: block;
+		padding: 25px 0;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.container {
+		padding: 10px;
+		max-width: 100%;
+	}
+
+	nav {
+		background: -moz-linear-gradient(150deg, white 0%, white 50%, #333 50%, #333 100%);
+		background: -webkit-linear-gradient(150deg, white 0%, white 50%, #333 50%, #333 100%);
+		background: linear-gradient(150deg, white 0%, white 50%, #333 50%, #333 100%);
+	}
+
+	nav a {
+		padding: 25px;
+	}
+
+	#logo {
+		padding-bottom: 50px;
+	}
+
+	main h2 .orange {
+		display: block;
+	}
+}

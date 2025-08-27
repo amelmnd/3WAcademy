@@ -1,0 +1,93 @@
+/* **************************************************** */
+/*  GENERAL */
+ul{
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+
+/* FIRST LEVEL OF NAVIGATION */
+.navigation {
+    clear: both;
+}
+
+.navigation>ul {
+    text-align: center;
+    position: relative;
+    padding: 0;
+}
+
+.navigation>ul>li {
+    display: inline-block;
+    width: 150px;
+    padding: 10px;
+}
+
+.navigation>ul>li>a {
+    text-decoration: none;
+    color: #2cbcd6;
+    font-weight: bold;
+}
+
+/* TRANSITION FIRST/SECOND LEVEL */
+.navigation>ul>li>div {
+    position: absolute;
+    top: 47px;
+    left: 0;
+    right: 0;
+    background: #2cbcd6;
+}
+
+/* SECOND LEVEL OF NAVIGATION */
+/* PRODUCTS */
+div>div {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.navigation>ul>li>div>div>ul {
+    float: left;
+    padding: 30px;
+    width: 50%;
+}
+
+ul>li>h2 {
+    color: #85daee;
+}
+
+div>ul>li>a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*APPLICATION  */
+.navigation>ul>li>div {
+    padding-bottom: 30px;
+}
+
+.navigation>ul>li>div>div>div {
+    float: left;
+    width: 50%;
+}
+
+.navigation>ul>li>div>div>div>ul {
+    padding-top: 30px;
+}
+
+/* HOVER */
+.navigation>ul>li>div {
+    display: none;
+}
+.navigation>ul:hover>li{
+    padding: 0px;
+}
+
+.navigation>ul>li:hover>div,
+.navigation>ul>li:hover>a {
+    display: block;
+    color: #fff;
+    background: #2cbcd6;
+    padding: 10px;
+}
